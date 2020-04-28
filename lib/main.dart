@@ -1,320 +1,70 @@
 import 'package:flutter/material.dart';
+import 'package:flowpodcast/pages/news.dart';
+import 'package:flowpodcast/pages/forum.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(Main());
 
-class MyApp extends StatelessWidget {
+class Main extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flowpodcast',
+      title: 'Flutter BottomNavigationBar Tutorial',
       theme: ThemeData(
-        primarySwatch: Colors.grey,
+        primarySwatch: Colors.red,
       ),
-      home: MyHomePage(title: 'Flowpodcast'),
+      home: MainPage(),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
-
-  final String title;
-
+class MainPage extends StatefulWidget {
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  _MainPageState createState() => _MainPageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _MainPageState extends State<MainPage> {
+  int _currentIndex = 0;
+
+  final List<Widget> _children = [
+    News,
+    Forum,
+    News,
+    News,
+  ];
+
+  void _onBottomNavBarTab(int index) {
+    setState(() {
+      _currentIndex = index;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(
-        child: Stack(
-          children: <Widget>[
-            Container(
-              //margin: const EdgeInsets.all(20.0),
-              margin: EdgeInsets.symmetric(vertical: 60.0, horizontal: 20.0),
-              child: Column(
-                mainAxisSize: MainAxisSize.max,
-                children: <Widget>[
-                  Container(
-                    child: Column(
-                      children: <Widget>[
-                        Align(
-                          alignment: Alignment.centerLeft,
-                          child: Text(
-                            'Notícias Flow',
-                            style: TextStyle(
-                              color: Colors.black,
-                              fontWeight: FontWeight.w600,
-                              fontSize: 24,
-                            ),
-                          ),
-                        ),
-                        Align(
-                          alignment: Alignment.centerLeft,
-                          child: Text(
-                            'Acompanhe o Twitter do Flowpodcast',
-                            style: TextStyle(
-                              color: Colors.grey,
-                              fontWeight: FontWeight.w600,
-                              fontSize: 14,
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  SizedBox(height: 25),
-                  Container(
-                    child: Column(
-                      children: <Widget>[
-                        Align(
-                          alignment: Alignment.centerLeft,
-                          child: Text(
-                            'Twitter Oficial',
-                            style: TextStyle(
-                              color: Colors.black,
-                              fontWeight: FontWeight.w600,
-                              fontSize: 18,
-                            ),
-                          ),
-                        ),
-                        Container(
-                          child: Column(
-                            children: <Widget>[
-                              SizedBox(height: 20),
-                              Container(
-                                padding: const EdgeInsets.all(10.0),
-                                decoration: BoxDecoration(
-                                  color: Colors.lightBlue[50],
-                                  borderRadius: BorderRadius.circular(12),
-                                ),
-                                child: Column(
-                                  children: <Widget>[
-                                    Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceBetween,
-                                      children: <Widget>[
-                                        Text(
-                                          'Flow Podcast',
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.w600,
-                                            fontSize: 14,
-                                          ),
-                                        ),
-                                        Text(
-                                          '13 de jan',
-                                        ),
-                                      ],
-                                    ),
-                                    SizedBox(height: 5),
-                                    Align(
-                                      alignment: Alignment.centerLeft,
-                                      child: Text(
-                                        'não é uma entrevista, é uma conversa',
-                                        style: TextStyle(
-                                            //fontWeight: FontWeight.w600,
-                                            ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              SizedBox(height: 20),
-                              Container(
-                                padding: const EdgeInsets.all(10.0),
-                                decoration: BoxDecoration(
-                                  color: Colors.lightBlue[50],
-                                  borderRadius: BorderRadius.circular(12),
-                                ),
-                                child: Column(
-                                  children: <Widget>[
-                                    Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceBetween,
-                                      children: <Widget>[
-                                        Text(
-                                          'Flow Podcast',
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.w600,
-                                            fontSize: 14,
-                                          ),
-                                        ),
-                                        Text(
-                                          '13 de jan',
-                                        ),
-                                      ],
-                                    ),
-                                    SizedBox(height: 5),
-                                    Align(
-                                      alignment: Alignment.centerLeft,
-                                      child: Text(
-                                        'não é uma entrevista, é uma conversa',
-                                        style: TextStyle(
-                                            //fontWeight: FontWeight.w600,
-                                            ),
-                                      ),
-                                    ),
-                                    SizedBox(height: 10),
-                                    Container(
-                                      height: 120,
-                                      decoration: BoxDecoration(
-                                        color: Colors.grey,
-                                        image: const DecorationImage(
-                                          image: NetworkImage(
-                                              'https:///flutter.github.io/assets-for-api-docs/assets/widgets/owl-2.jpg'),
-                                          fit: BoxFit.cover,
-                                        ),
-                                        borderRadius: BorderRadius.circular(10),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        SizedBox(height: 25),
-                        Align(
-                          alignment: Alignment.centerLeft,
-                          child: Text(
-                            'Comunidade Youtube',
-                            style: TextStyle(
-                              color: Colors.black,
-                              fontWeight: FontWeight.w600,
-                              fontSize: 18,
-                            ),
-                          ),
-                        ),
-                        Container(
-                          //
-                          child: Column(
-                            children: <Widget>[
-                              SizedBox(height: 20),
-                              Container(
-                                padding: const EdgeInsets.all(10.0),
-                                decoration: BoxDecoration(
-                                  color: Colors.lightBlue[50],
-                                  borderRadius: BorderRadius.circular(12),
-                                ),
-                                child: Column(
-                                  children: <Widget>[
-                                    Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceBetween,
-                                      children: <Widget>[
-                                        Text(
-                                          'Flow Podcast',
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.w600,
-                                            fontSize: 14,
-                                          ),
-                                        ),
-                                        Text(
-                                          '13 de jan',
-                                        ),
-                                      ],
-                                    ),
-                                    SizedBox(height: 5),
-                                    Align(
-                                      alignment: Alignment.centerLeft,
-                                      child: Text(
-                                        'não é uma entrevista, é uma conversa',
-                                        style: TextStyle(
-                                            //fontWeight: FontWeight.w600,
-                                            ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              SizedBox(height: 20),
-                              Container(
-                                padding: const EdgeInsets.all(10.0),
-                                decoration: BoxDecoration(
-                                  color: Colors.lightBlue[50],
-                                  borderRadius: BorderRadius.circular(12),
-                                ),
-                                child: Column(
-                                  children: <Widget>[
-                                    Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceBetween,
-                                      children: <Widget>[
-                                        Text(
-                                          'Flow Podcast',
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.w600,
-                                            fontSize: 14,
-                                          ),
-                                        ),
-                                        Text(
-                                          '13 de jan',
-                                        ),
-                                      ],
-                                    ),
-                                    SizedBox(height: 5),
-                                    Align(
-                                      alignment: Alignment.centerLeft,
-                                      child: Text(
-                                        'não é uma entrevista, é uma conversa',
-                                        style: TextStyle(
-                                            //fontWeight: FontWeight.w600,
-                                            ),
-                                      ),
-                                    ),
-                                    SizedBox(height: 10),
-                                    Container(
-                                      height: 120,
-                                      decoration: BoxDecoration(
-                                        color: Colors.grey,
-                                        image: const DecorationImage(
-                                          image: NetworkImage(
-                                              'https:///flutter.github.io/assets-for-api-docs/assets/widgets/owl-2.jpg'),
-                                          fit: BoxFit.cover,
-                                        ),
-                                        borderRadius: BorderRadius.circular(10),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
-                        ), //
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ],
-        ),
-      ),
+      body: _children[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
+        currentIndex: _currentIndex,
+        onTap: _onBottomNavBarTab,
+        items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             title: Text('Home'),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.book),
+            icon: Icon(Icons.library_books),
             title: Text('Forum'),
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.new_releases),
-            title: Text('Notícias'),
+            title: Text('News'),
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person),
-            title: Text('Perfil'),
+            title: Text('Profile'),
           ),
         ],
-        //currentIndex: _selectedIndex,
         unselectedItemColor: Colors.grey,
-        selectedItemColor: Colors.amber[400],
-        //onTap: _onItemTapped,
+        selectedItemColor: Colors.amber[800],
       ),
     );
   }
