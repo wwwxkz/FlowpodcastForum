@@ -10,9 +10,9 @@ class Main extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter BottomNavigationBar Tutorial',
+      title: 'Flowpodcast',
       theme: ThemeData(
-        primarySwatch: Colors.red,
+        primarySwatch: Colors.lightBlue[50],
       ),
       home: MainPage(),
     );
@@ -28,7 +28,7 @@ class _MainPageState extends State<MainPage> {
   int _currentIndex = 0;
 
   final List<Widget> _children = [
-    Profile,
+    Login,
     Forum,
     News,
     Profile,
