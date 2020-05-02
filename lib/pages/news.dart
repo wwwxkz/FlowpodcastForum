@@ -26,7 +26,7 @@ final News = Scaffold(
                     Align(
                       alignment: Alignment.centerLeft,
                       child: Text(
-                        'Acompanhe o Twitter do Flowpodcast',
+                        'Últimas notícias do Flowpodcast',
                         style: TextStyle(
                           color: Colors.grey,
                           fontWeight: FontWeight.w600,
@@ -85,9 +85,6 @@ final News = Scaffold(
                                   alignment: Alignment.centerLeft,
                                   child: Text(
                                     'não é uma entrevista, é uma conversa',
-                                    style: TextStyle(
-                                        //fontWeight: FontWeight.w600,
-                                        ),
                                   ),
                                 ),
                               ],
@@ -123,9 +120,6 @@ final News = Scaffold(
                                   alignment: Alignment.centerLeft,
                                   child: Text(
                                     'não é uma entrevista, é uma conversa',
-                                    style: TextStyle(
-                                        //fontWeight: FontWeight.w600,
-                                        ),
                                   ),
                                 ),
                                 SizedBox(height: 10),
@@ -133,11 +127,11 @@ final News = Scaffold(
                                   height: 120,
                                   decoration: BoxDecoration(
                                     color: Colors.grey,
-                                    image: const DecorationImage(
-                                      image: NetworkImage(
-                                          ''),
-                                      fit: BoxFit.cover,
-                                    ),
+                                    //image: const DecorationImage(
+                                    //  image: NetworkImage(
+                                    //      ''),
+                                    //  fit: BoxFit.cover,
+                                    //),
                                     borderRadius: BorderRadius.circular(10),
                                   ),
                                 ),
@@ -193,9 +187,6 @@ final News = Scaffold(
                                   alignment: Alignment.centerLeft,
                                   child: Text(
                                     'não é uma entrevista, é uma conversa',
-                                    style: TextStyle(
-                                        //fontWeight: FontWeight.w600,
-                                        ),
                                   ),
                                 ),
                               ],
@@ -231,9 +222,6 @@ final News = Scaffold(
                                   alignment: Alignment.centerLeft,
                                   child: Text(
                                     'não é uma entrevista, é uma conversa',
-                                    style: TextStyle(
-                                        //fontWeight: FontWeight.w600,
-                                        ),
                                   ),
                                 ),
                                 SizedBox(height: 10),
@@ -241,11 +229,11 @@ final News = Scaffold(
                                   height: 120,
                                   decoration: BoxDecoration(
                                     color: Colors.grey,
-                                    image: const DecorationImage(
-                                      image: NetworkImage(
-                                          ''),
-                                      fit: BoxFit.cover,
-                                    ),
+                                    //image: const DecorationImage(
+                                    //  image: NetworkImage(
+                                    //      ''),
+                                    //  fit: BoxFit.cover,
+                                    //),
                                     borderRadius: BorderRadius.circular(10),
                                   ),
                                 ),

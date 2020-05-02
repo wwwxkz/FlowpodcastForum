@@ -83,9 +83,6 @@ final Forum = Scaffold(
                                   alignment: Alignment.centerLeft,
                                   child: Text(
                                     'não é uma entrevista, é uma conversa',
-                                    style: TextStyle(
-                                        //fontWeight: FontWeight.w600,
-                                        ),
                                   ),
                                 ),
                               ],
@@ -121,9 +118,6 @@ final Forum = Scaffold(
                                   alignment: Alignment.centerLeft,
                                   child: Text(
                                     'não é uma entrevista, é uma conversa',
-                                    style: TextStyle(
-                                        //fontWeight: FontWeight.w600,
-                                        ),
                                   ),
                                 ),
                               ],
@@ -178,9 +172,6 @@ final Forum = Scaffold(
                                   alignment: Alignment.centerLeft,
                                   child: Text(
                                     'não é uma entrevista, é uma conversa',
-                                    style: TextStyle(
-                                        //fontWeight: FontWeight.w600,
-                                        ),
                                   ),
                                 ),
                               ],
@@ -234,9 +225,6 @@ final Forum = Scaffold(
                                   alignment: Alignment.centerLeft,
                                   child: Text(
                                     'não é uma entrevista, é uma conversa',
-                                    style: TextStyle(
-                                        //fontWeight: FontWeight.w600,
-                                        ),
                                   ),
                                 ),
                               ],
@@ -272,9 +260,6 @@ final Forum = Scaffold(
                                   alignment: Alignment.centerLeft,
                                   child: Text(
                                     'não é uma entrevista, é uma conversa',
-                                    style: TextStyle(
-                                        //fontWeight: FontWeight.w600,
-                                        ),
                                   ),
                                 ),
                               ],

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flowpodcast/pages/news.dart';
 import 'package:flowpodcast/pages/forum.dart';
+import 'package:flowpodcast/pages/profile.dart';
 
 void main() => runApp(Main());
 
@@ -29,7 +30,7 @@ class _MainPageState extends State<MainPage> {
     News,
     Forum,
     News,
-    News,
+    Profile,
   ];
 
   void _onBottomNavBarTab(int index) {
