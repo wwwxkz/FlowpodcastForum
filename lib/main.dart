@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flowpodcast/pages/news.dart';
+import 'package:flowpodcast/pages/login.dart';
 import 'package:flowpodcast/pages/forum.dart';
+import 'package:flowpodcast/pages/news.dart';
 import 'package:flowpodcast/pages/profile.dart';
 
 void main() => runApp(Main());
@@ -27,7 +28,7 @@ class _MainPageState extends State<MainPage> {
   int _currentIndex = 0;
 
   final List<Widget> _children = [
-    News,
+    Profile,
     Forum,
     News,
     Profile,
